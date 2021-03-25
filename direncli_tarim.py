@@ -159,7 +159,8 @@ with row2_1:
           range_y = [tum[[sicaklik_y if eksen_y == 'Sıcaklık' else yagis_y if eksen_y == 'Yağış' else diger_y][0]+str(ay_y)].min(),tum[[sicaklik_y if eksen_y == 'Sıcaklık' else yagis_y if eksen_y == 'Yağış' else diger_y][0]+str(ay_y)].max()],
           range_x = [tum[[sicaklik_x if eksen_x == 'Sıcaklık' else yagis_x if eksen_x == 'Yağış' else diger_x][0]+str(ay_x)].min(),tum[[sicaklik_x if eksen_x == 'Sıcaklık' else yagis_x if eksen_x == 'Yağış' else diger_x][0]+str(ay_x)].max()],
           template = 'none',
-          size_max=60
+          size_max=60,
+          labels = {'Ort. Günlük Sıcaklık Farkı': 'Ortalama günlük sıcaklık farkı', 'GOrtSıcOrt': 'Günlük ortalama sıcaklık ortalaması', 'GMinSıcOrt': 'Günlük minimum sıcaklık ortalaması', 'GMinSıcMin': 'Günlük minimum sıcaklığın minimumu', 'GMinSıcMax': 'Günlük minimum sıcaklığın maxsimumu', 'GMaxSıcOrt': 'Günlük maksimum sıcaklık ortalaması', 'GMaxSıcMin': 'Günlük maksimum sıcaklığın minimumu', 'MaxGMaxSıc': 'Maksimum günlük sıcaklığın maksimumu'}
           )
     fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = 500
     st.plotly_chart(fig)
